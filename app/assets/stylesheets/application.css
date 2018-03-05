@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+:root {
+  --orange: #FF5722;
+  --header-color: #B2DFDB;
+  --button-color: #26A69A;
+  --button-text: #FFFFFF;
+}
+header {
+  background-color: var(--header-color);
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns:  repeat(12fr);
+}
+.title {
+  display: flex;
+  grid-column: 1 / 13;
+  justify-content: center;
+}
+.main-title {
+  border-right: white 2px solid;
+  color: var(--orange);
+}
+.button {
+  background-color: var(--button-color);
+  color: var(--button-text);
+}
+nav {
+  grid-column: 10 / 13;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+nav > ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.button > a:link,  .button > a:visited{
+  color: var(--button-text);
+}
+nav > ul > li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
